@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400');
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+@import url('https://fonts.googleapis.com/css?family=Neucha');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root{
+    --color-dark: #000;
+    --color-light: #fff;
+    --color-secondary: #6B00F3;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+.main{
+    min-height: 100vh;
+    background: linear-gradient(40deg, var(--color-secondary), lightblue);
+    padding: 50px;
+}
+
+.is-flexed{
+    display: flex;
+    max-width: 1500px;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+
+.is-card{
+    background: var(--color-light);
+    width: 600px;
+    padding: 25px 0;
+    border-radius: 8px;
+    box-shadow: 0px 0px 77px rgba(0, 0, 0, 0.27);
+    position: relative;
+}
+
+.is-card h3{
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 0.48rem;
+    font-weight: 300;
+    margin-bottom: 35px;
+    text-indent: 35px;
+}
+
+.scroll-list{
+    max-height: 600px;
+    width: inherit;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.contact-lyt{
+    height: 100px;
+    width: 600px;
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.circle-box{
+    width: 100px;
+    text-align: center;
+}
+
+.circle{
+    height: 60px;
+    width: 60px;
+    background: url(img/boy.svg);
+    object-fit: cover;
+    border-radius: 300px;
+    display: inline-block;
+    margin: 25px 0;
+    margin-left: 15px;
+}
+
+.is-alltext{
+    width: 500px;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.575);
+    padding: 25px 5px 5px 15px;
+}
+
+.is-alltext h2{
+    font-size: 21px;
+}
+.is-alltext p{
+    color: var(--color-secondary);
+    font-size: 14px;
+}
+
+.btn{
+    display: inline-block;
+    background: var(--color-secondary);
+    border-radius: 100px;
+    border: none;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
+
+.btn-load{
+    top: 620px;
+    padding: 18px 35px;
+    font-size: 12px;
+    box-shadow: 0px 7px 7px rgba(107, 0, 243, 0.25);
+    letter-spacing: 0.2rem;
+    font-family: Nunito;
+}
+
+.btn-link:link,
+.btn-link:visited{
+    text-decoration: none;
+    color: var(--color-light);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.is-textbox{
+    width: 600px;
+    align-self: center;
+    position: relative;
+    margin-top: -50px;
+}
+
+.is-textbox h1{
+    font-family: 'Cabin', sans-serif;
+    font-size: 54px;
+    text-align: center;
+    color: #1f1f1f;
+}
+
+.btn-tour{
+    top: 320px;
+    font-size: 36px;
+    padding: 8px 45px;
+    box-shadow: -29px 22px 19px rgba(112, 0, 255, 0.33);
+    font-family: 'Neucha', cursive;
+    letter-spacing: 0.2rem;
+}
