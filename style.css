@@ -74,7 +74,6 @@ body{
 
 .circle-box{
     width: 100px;
-    text-align: center;
 }
 
 .circle{
@@ -83,9 +82,7 @@ body{
     background: url(img/boy.svg);
     object-fit: cover;
     border-radius: 300px;
-    display: inline-block;
-    margin: 25px 0;
-    margin-left: 15px;
+    margin: 25px auto;
 }
 
 .is-alltext{
