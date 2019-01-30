@@ -16,6 +16,10 @@
     --color-secondary: #6B00F3;
 }
 
+*::selection {
+    background: rgba(105, 0, 243, 0.349);
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -23,40 +27,45 @@ body{
     font-family: 'Nunito', sans-serif;
 }
 
-.main{
-    min-height: 100vh;
+.main {
     background: linear-gradient(40deg, var(--color-secondary), lightblue);
-    padding: 50px;
 }
 
 .is-flexed{
+    padding: 50px;
     display: flex;
-    max-width: 1500px;
     margin: 0 auto;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    max-width: 1500px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.is-flexed > * {
+    max-width: 500px;
 }
 
 .is-card{
-    background: var(--color-light);
+    padding: 0;
     width: 600px;
-    padding: 25px 0;
     border-radius: 8px;
-    box-shadow: 0px 0px 77px rgba(0, 0, 0, 0.27);
     position: relative;
+    background: var(--color-light);
+    box-shadow: 0px 0px 77px rgba(0, 0, 0, 0.27);
 }
 
 .is-card h3{
-    text-transform: uppercase;
-    font-size: 20px;
-    letter-spacing: 0.48rem;
+    font-size: 13px;
     font-weight: 300;
-    margin-bottom: 35px;
-    text-indent: 35px;
+    text-indent: 25px;
+    line-height: 50px;
+    letter-spacing: 0.48rem;
+    text-transform: uppercase;
 }
 
 .scroll-list{
     max-height: 600px;
-    width: inherit;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -65,57 +74,72 @@ body{
     display: none;
 }
 
-.contact-lyt{
+.contact-lyt {
+    width: 100%;
     height: 100px;
-    width: 600px;
-    margin-bottom: 15px;
     display: flex;
+    min-height: 80px;
+    user-select: none;
+    -webkit-user-select: none;
+    padding: 15px 0;
+    align-items: center;
 }
 
 .circle-box{
     width: 100px;
+    flex-basis: 100px;
 }
 
-.circle{
+.circle {
     height: 60px;
     width: 60px;
     background: url(img/boy.svg);
     object-fit: cover;
     border-radius: 300px;
-    margin: 25px auto;
+    margin: 0 auto;
+  
 }
 
-.is-alltext{
-    width: 500px;
-    border-bottom: 2px solid rgba(245, 245, 220, 0.8);
-    padding: 25px 5px 5px 15px;
+.is-alltext {
+    flex-basis: calc(100% - 100px);
+    line-height: 25px;
+    white-space: nowrap;
 }
 
 .is-alltext h2{
     font-size: 21px;
+    margin-bottom: 5px;
+    text-overflow: ellipsis;
 }
-.is-alltext p{
+
+.is-alltext p {
     color: var(--color-secondary);
     font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    text-overflow: ellipsis;
+    border-bottom: 2px solid rgba(245, 245, 220, 0.8);
 }
 
-.btn{
-    display: inline-block;
-    background: var(--color-secondary);
-    border-radius: 100px;
+/* Learn how Mixins works */
+/* You'll need to make sure you have a button before */
+.btn {
     border: none;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
+    font-size: 12px;
+    padding: 18px 35px;
+    font-family: Nunito;
+    border-radius: 100px;
+    display: inline-block;
+    letter-spacing: 0.2rem;
+    background: var(--color-secondary);
 }
 
-.btn-load{
-    top: 620px;
-    padding: 18px 35px;
-    font-size: 12px;
+.btn-load {
+    left: 50%;
+    bottom: 20px;
+    position: absolute;
+    transform: translateX(-50%);
     box-shadow: 0px 7px 7px rgba(107, 0, 243, 0.25);
-    letter-spacing: 0.2rem;
-    font-family: Nunito;
 }
 
 .btn-link:link,
@@ -126,25 +150,28 @@ body{
     text-align: center;
 }
 
-.is-textbox{
-    width: 600px;
+.is-textbox {
     align-self: center;
     position: relative;
-    margin-top: -50px;
+    text-align: center;
 }
 
 .is-textbox h1{
     font-family: 'Cabin', sans-serif;
-    font-size: 54px;
-    text-align: center;
+    font-size: 4.5ch;
     color: #1f1f1f;
 }
 
-.btn-tour{
-    top: 320px;
+.btn-tour {
     font-size: 36px;
+    margin-top: 30px;
     padding: 8px 45px;
-    box-shadow: -29px 22px 19px rgba(112, 0, 255, 0.33);
-    font-family: 'Neucha', cursive;
     letter-spacing: 0.2rem;
+    font-family: 'Neucha', cursive;
+    box-shadow: -29px 22px 19px rgba(112, 0, 255, 0.33);
+    transition: all .3s ease-out;
+}
+
+.btn-tour:hover {
+    box-shadow: -3px 3px 19px rgba(112, 0, 255, 0.33);
 }
